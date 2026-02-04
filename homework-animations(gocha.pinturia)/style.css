@@ -12,9 +12,7 @@ body {
     background-color: rgb(15, 15, 15);
     padding: 50px;
 }
-p {
-    color: white;
-}
+
 
 .logo_small {
     background-color: rgb(15, 15, 15);
@@ -36,7 +34,7 @@ p {
     letter-spacing: 0%;
     text-align: center;
     height: 63px;
-    transition: all 0.9s ease;
+    transition: all 0.3s ease;
 }
 .button_layout:hover {
     cursor: pointer;
@@ -106,8 +104,8 @@ p {
     bottom: -3%;
     left: 50%;
     transform: translate(-50%);
-    padding: 18px 24px;
-    width: 10%;
+    padding: 18px 15px;
+    width: 159px;
     height: 9%;
     border-radius: 12px;
     overflow: hidden;
@@ -124,6 +122,7 @@ p {
     letter-spacing: 0%;
     color: white;
     overflow: hidden;
+    transition: all 0.3s;
     img {
         width: 25%;
     }
@@ -147,7 +146,7 @@ p {
 }
 .button_shop_now:active {
   translate: 2px 2px;
-  background: blueviolet;
+  background: rgb(226, 194, 11);
 } 
 @keyframes rotate {
     from {rotate: 0deg;} 
@@ -178,22 +177,42 @@ p {
     .styleloom_content {
         max-width: 550px;
     }
-    .styleloom_btm li{
-        display: inline;
-        margin-right: 14px;
-        img {
-            transition: all 1s ease;
-        }        
-    a {
-        color: rgba(179, 179, 178, 1);
-    }        
+}
+
+.styleloom_btm {
+    display: flex;
+    width: 100%;
+    height: 55px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 14px;
+    li {
+        display: inline-block;
     }
 }
+
+.styleloom_button {
+    display: inline-block;
+    width:100%;
+    padding: 18px 28px;
+    border: dashed rgb(38, 38, 38);
+    border-radius: 12px;    
+    color: rgba(179, 179, 178, 1);
+}
+
+.styleloom_button:hover {
+    background: rgba(194, 180, 163, 1);
+    color: rgba(15, 15, 15, 1);
+    border-color: rgba(194, 180, 163, 1);
+    transition: all 1s;
+}
+
+
 .styleloom_btm img:hover {
     background-color: gray;
     border-radius: 15px;
+    color: black;
 }
-
 
 .prd {
     display: grid;
@@ -228,6 +247,7 @@ p {
     font-family: Roboto;
     font-size: 48px;
     text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
 }
 .p_18 {
     font-family: Roboto;
@@ -266,11 +286,6 @@ article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-}
-
-.icons {
-    /* display: flex;
-    justify-content: space-between; */
 }
 
 .first_item {
@@ -312,10 +327,6 @@ article {
     border-right: dashed rgb(38, 38, 38);
     border-bottom: dashed rgb(38, 38, 38);
     border-bottom-right-radius: 30px;
-    /* display: flex; */
-    /* flex-direction: column;
-    justify-content: space-around;
-    align-items: self-start; */
 }
 
 .text_item {
@@ -326,5 +337,174 @@ article {
     img {
         padding-bottom: 30px;
     }
-    /* gap: 90px; */
+}
+
+.sub_container {
+    height: 390px;
+    background: url(./icons/Abstract_Design.svg) no-repeat right;
+    border-left: dashed rgb(38, 38, 38);
+    border-right: dashed rgb(38, 38, 38);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 80px;
+    li img {
+        height: 63px;
+    }
+}
+
+.cards {
+    border: dashed rgb(38, 38, 38);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 40px;
+}
+
+.item_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    transition: transform 0.3s ease;
+    .line {
+        margin-bottom: 20px;
+    }
+    .foto {
+        transition: transform 0.5s ease;
+    }
+    .foto:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+    .title_card {
+        margin-top: 20px;
+        .p_24 {
+            word-spacing: 20px;
+        }
+    }
+    .p_20 {
+        font-family: Roboto Mono;
+        font-size: 20px;
+        line-height: 150%;
+    }
+    span {
+        margin-right: 10px;
+        word-spacing: 5px;
+    }
+    span::after {
+        content: ' \2022';
+    }
+}
+.first_card {}
+.second_card {
+    border-bottom: dashed rgb(38, 38, 38);
+    border-right: dashed rgb(38, 38, 38);
+    border-left: dashed rgb(38, 38, 38);
+}
+
+.third_card {
+    border-bottom: dashed rgb(38, 38, 38);
+}
+
+.fourth_card {
+    border-right: dashed rgb(38, 38, 38);
+    border-top: dashed rgb(38, 38, 38);
+}
+
+.fifth_card {
+    border-right: dashed rgb(38, 38, 38);
+}
+
+.container_btm {
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+
+.line {
+    width: 100%;
+    height: 63px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.button_shop_now_card {
+    position: relative;
+    border-radius: 12px;
+    display: flex;
+    padding: 18px 15px;
+    width: 159px;
+    height: 63px;
+    justify-content: space-between;
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    letter-spacing: 0%;
+    color: white;
+    background-color: rgba(64, 64, 64, 1);
+    z-index: 1;
+    overflow: hidden;
+    img {
+        width: 25px;
+    }
+}
+
+.questions {
+    height: 390px;
+    background: url(./icons/Abstract_Design_bottom.svg) no-repeat right top;
+    border: dashed rgb(38, 38, 38); 
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 80px;
+}
+
+.have_question:hover {
+    color: chocolate;
+    transition: all 0.3s;
+}
+
+.questions_bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 0;
+    column-gap: 0;
+    /* border: dashed rgb(38, 38, 38);  */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.questions_bottom_cnt {
+    padding: 60px;
+    .title_quetion {
+        margin-bottom: 16px;
+    }
+}
+
+.border_q1, .border_q3, .border_q5 {
+    border-left: dashed rgb(38, 38, 38);
+    border-bottom: dashed rgb(38, 38, 38);
+    border-right: dashed rgb(38, 38, 38);
+}
+
+.border_q2, .border_q4, .border_q6 {
+    border-right: dashed rgb(38, 38, 38);
+    border-bottom: dashed rgb(38, 38, 38);
+}
+
+.border_q5 {
+    border-bottom-left-radius: 30px;
+}
+
+.border_q6 {
+    border-bottom-right-radius: 30px;
 }
