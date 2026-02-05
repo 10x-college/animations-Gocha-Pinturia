@@ -6,13 +6,16 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: rgb(15, 15, 15);
     padding: 50px;
 }
-
 
 .logo_small {
     background-color: rgb(15, 15, 15);
@@ -258,6 +261,27 @@ body {
     letter-spacing: 0%;
     color: rgba(129, 128, 126, 1)
 }
+
+.p_22 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.p_20 {
+    font-family: Roboto Mono;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: rgba(103, 102, 101, 1);
+}
+
 .p_24 {
     font-family: Roboto;
     font-size: 24px;
@@ -289,7 +313,6 @@ article {
 }
 
 .first_item {
-    height: 400px;
     background: url(./icons/Icon_star.svg) no-repeat top right;
     border-left: dashed rgb(38, 38, 38);
     border-right: dashed rgb(38, 38, 38);
@@ -350,9 +373,6 @@ article {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0 80px;
-    li img {
-        height: 63px;
-    }
 }
 
 .cards {
@@ -375,6 +395,7 @@ article {
         margin-bottom: 20px;
     }
     .foto {
+        width: 100%;
         transition: transform 0.5s ease;
     }
     .foto:hover {
@@ -400,7 +421,6 @@ article {
         content: ' \2022';
     }
 }
-.first_card {}
 .second_card {
     border-bottom: dashed rgb(38, 38, 38);
     border-right: dashed rgb(38, 38, 38);
@@ -418,11 +438,6 @@ article {
 
 .fifth_card {
     border-right: dashed rgb(38, 38, 38);
-}
-
-.container_btm {
-    /* position: relative; */
-    /* overflow: hidden; */
 }
 
 .line {
@@ -478,9 +493,9 @@ article {
     grid-template-rows: repeat(3, 1fr);
     row-gap: 0;
     column-gap: 0;
-    /* border: dashed rgb(38, 38, 38);  */
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    margin-bottom: 36px;
 }
 
 .questions_bottom_cnt {
@@ -507,4 +522,121 @@ article {
 
 .border_q6 {
     border-bottom-right-radius: 30px;
+}
+
+.footer_logo {
+    height: 346px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: dashed rgb(38, 38, 38);
+    border-bottom: dashed rgb(38, 38, 38);
+    span {
+        margin-left: 20px;
+    }
+}
+.social_media {
+    position: relative;
+    bottom: 20%;
+}
+.instagram{
+    position: absolute;
+    right: 258px;
+    animation: lift 1s infinite linear 0.2s;
+}
+
+.soccer_ball {
+    position: absolute;
+    right: 172px;
+    animation: lift 1s infinite linear 0.3s;
+}
+
+.twiter {
+    position: absolute;
+    right: 86px;
+    animation: lift 1s infinite linear 0.4s;
+}
+
+.Bb {
+    position: absolute;
+    right: 0;
+    animation: lift 1s infinite linear 0.5s;
+}
+
+@keyframes lift {
+    0% { transform: translateY(30px);}
+    50% { transform: translateY(0);}
+    100% { transform: translateY(30px);}
+}
+
+.home_products_subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 280px;
+    border-bottom: dashed rgb(38, 38, 38);
+    .p_22 {
+        margin-bottom: 30px;
+    }
+}
+
+.home_products_subscribe, .title_products {
+    span {
+        display: inline-block;
+        transition: transform 0.2s ease-in-out;
+    }
+    span:hover{
+    display: inline-block;
+    transform: scale(1.1);
+    color: rgb(163, 161, 161);
+    }
+    small::after {
+        content: ' \2022\ ';
+    }
+
+}
+
+.box_email {
+    width: 25%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.box_input {
+    position: relative;
+    &::after {
+        position: absolute;
+        left: 90%;
+        top: 50%;
+        transform: translateY(-25%);
+        width: 50%;
+        height: 50%;
+        content: '';
+        background-image: url(./icons/Vector.svg);
+        background-repeat: no-repeat;
+    }
+    input {
+        display: block;
+        height: 63px;
+        width: 100%;
+        padding: 24px;
+        word-spacing: 5px;
+        border: none;
+        background-color: rgba(26, 26, 26, 1);
+        border-radius: 12px;
+    }
+}
+
+.at_the_very_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 127px;
+    .border {
+        margin: 0 5px;
+        border-right: 2px solid rgba(38, 38, 38, 1);
+    }
 }
